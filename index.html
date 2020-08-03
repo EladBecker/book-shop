@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Book Shop</title>
+    <script src="https://kit.fontawesome.com/7e4dd38c8f.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="onInit()">
+    <header>
+        <h1 class="headline">Book Shop</h1>
+    </header>
+    <div class="main-container">
+        <div class="book-manager">
+            <section class="add-book">
+                <button class="toggle-add-book-btn" onclick="toggleAddBookForm()">
+                    <i class="fas fa-book"></i>
+                </button>
+                <div class="add-book-form hidden">
+                    <input type="text" class="name" placeholder="Book's name..." />
+                    <input type="text" class="price" placeholder="Book's price..." />
+                    <button class="add-book-btn" onclick="onAddBook()">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section class="book-list-container">
+                <!--book list rendered here-->
+            </section>
+
+            <span class="pagination">
+                <button onclick="onMovePage(-1)">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <span class="current-page"></span>
+                <button onclick="onMovePage(1)">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </span>
+        </div>
+        <section class="modal" hidden>
+            <button class="close-btn" onclick="closeReadModalWindow()">X</button>
+            <div class="content">
+                <h5 class="name"></h5>
+                <img />
+                <h6 class="price"></h6>
+                <div class="rating"></div>
+        </section>
+    </div>
+    <script src="js/util-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/books-service.js"></script>
+    <script src="js/books-control.js"></script>
+</body>
+
+</html>

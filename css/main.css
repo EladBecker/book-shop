@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    color: whitesmoke;
+}
+
+body {
+    background: url('../img/lib_bg.jpg');
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0 25px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.main-container {
+    width: 70%;
+    text-align: center;
+    position: relative;
+}
+
+.book-manager {
+    justify-self: left;
+    display: flex;
+    flex-direction: column;
+}
+
+i {
+    color: goldenrod;
+    font-size: 22px;
+}
+
+button {
+    border: 1px solid rgb(190, 189, 189);
+    border-radius: 5%;
+    background-color: gray;
+    color: goldenrod;
+}
+
+button:hover {
+    background-color: goldenrod;
+    color: gray;
+}
+
+button:hover i {
+    color: gray;
+}
+
+input {
+    border-radius: 10%;
+    background-color: rgb(197, 197, 197);
+}
+
+input:focus {
+    background-color: gray;
+    color: goldenrod;
+    outline: none;
+}
+
+input::selection{
+    background-color: goldenrod;
+    color: black;
+}
+
+th {
+    color: goldenrod;
+    padding: 10px;
+}
+
+th:hover {
+    cursor: pointer;
+}
+
+.price-edit{
+    width:50px;
+    height: 100%;
+    text-align: center;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.actions button{
+    width: 36px;
+}
+
+.modal {
+    background-color: rgba(145, 141, 141, 0.349);
+    width: 250px;
+    position: absolute;
+    top: 0;
+    right: -250px;
+    z-index: 1;
+    border: 1px solid orange;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.delete:hover {
+    background-color: darkred;
+    color: whitesmoke;
+}
+
+.delete:hover i {
+    color: whitesmoke;
+}
+
+.add-book {
+    text-align: left;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.add-book-form {
+    display: flex;
+    align-items: center;
+}
+
+.add-book-form, .toggle-add-book-btn {
+    height: 100%;
+}
+
+.add-book-form>* {
+    height: 100%;
+    margin: 0 10px;
+}
+
+.add-book-form .name, .add-book-form .price {
+    flex-grow: 2;
+}
+
+.hidden {
+    display: none;
+}
+
+.book-list-container {
+    min-height: 230px;
+}
+
+.books-table {
+    width: 100%;
+    word-wrap: none;
+}
+
+.pagination {
+    margin: 10px 0;
+    width: 200px;
+    height: 30px;
+    align-self: center;
+    display: flex;
+}
+
+.pagination>* {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.pagination>button {
+    padding: 0;
+}
+
+.current-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
